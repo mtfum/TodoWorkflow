@@ -8,17 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		269B38B42740592D009EE767 /* WorkflowTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269B38B32740592D009EE767 /* WorkflowTodoApp.swift */; };
-		269B38B62740592D009EE767 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269B38B52740592D009EE767 /* ContentView.swift */; };
 		269B38B82740592E009EE767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 269B38B72740592E009EE767 /* Assets.xcassets */; };
 		269B38BB2740592E009EE767 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 269B38BA2740592E009EE767 /* Preview Assets.xcassets */; };
+		269B38C3274059F5009EE767 /* Workflow in Frameworks */ = {isa = PBXBuildFile; productRef = 269B38C2274059F5009EE767 /* Workflow */; };
+		269B38C5274059F5009EE767 /* WorkflowCombine in Frameworks */ = {isa = PBXBuildFile; productRef = 269B38C4274059F5009EE767 /* WorkflowCombine */; };
+		269B38C7274059F5009EE767 /* WorkflowSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 269B38C6274059F5009EE767 /* WorkflowSwiftUI */; };
+		269B38C927405AC2009EE767 /* TodoWorkflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269B38C827405AC2009EE767 /* TodoWorkflow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		269B38B02740592D009EE767 /* WorkflowTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkflowTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		269B38B32740592D009EE767 /* WorkflowTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkflowTodoApp.swift; sourceTree = "<group>"; };
-		269B38B52740592D009EE767 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		269B38B72740592E009EE767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		269B38BA2740592E009EE767 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		269B38C827405AC2009EE767 /* TodoWorkflow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoWorkflow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				269B38C3274059F5009EE767 /* Workflow in Frameworks */,
+				269B38C7274059F5009EE767 /* WorkflowSwiftUI in Frameworks */,
+				269B38C5274059F5009EE767 /* WorkflowCombine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				269B38B32740592D009EE767 /* WorkflowTodoApp.swift */,
-				269B38B52740592D009EE767 /* ContentView.swift */,
+				269B38C827405AC2009EE767 /* TodoWorkflow.swift */,
 				269B38B72740592E009EE767 /* Assets.xcassets */,
 				269B38B92740592E009EE767 /* Preview Content */,
 			);
@@ -83,6 +89,11 @@
 			dependencies = (
 			);
 			name = WorkflowTodo;
+			packageProductDependencies = (
+				269B38C2274059F5009EE767 /* Workflow */,
+				269B38C4274059F5009EE767 /* WorkflowCombine */,
+				269B38C6274059F5009EE767 /* WorkflowSwiftUI */,
+			);
 			productName = WorkflowTodo;
 			productReference = 269B38B02740592D009EE767 /* WorkflowTodo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 269B38A72740592D009EE767;
+			packageReferences = (
+				269B38C1274059F5009EE767 /* XCRemoteSwiftPackageReference "workflow-swift" */,
+			);
 			productRefGroup = 269B38B12740592D009EE767 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				269B38B62740592D009EE767 /* ContentView.swift in Sources */,
+				269B38C927405AC2009EE767 /* TodoWorkflow.swift in Sources */,
 				269B38B42740592D009EE767 /* WorkflowTodoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +355,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		269B38C1274059F5009EE767 /* XCRemoteSwiftPackageReference "workflow-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/square/workflow-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		269B38C2274059F5009EE767 /* Workflow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 269B38C1274059F5009EE767 /* XCRemoteSwiftPackageReference "workflow-swift" */;
+			productName = Workflow;
+		};
+		269B38C4274059F5009EE767 /* WorkflowCombine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 269B38C1274059F5009EE767 /* XCRemoteSwiftPackageReference "workflow-swift" */;
+			productName = WorkflowCombine;
+		};
+		269B38C6274059F5009EE767 /* WorkflowSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 269B38C1274059F5009EE767 /* XCRemoteSwiftPackageReference "workflow-swift" */;
+			productName = WorkflowSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 269B38A82740592D009EE767 /* Project object */;
 }
